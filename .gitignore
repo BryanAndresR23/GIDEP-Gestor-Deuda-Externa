@@ -1,0 +1,14 @@
+# Datos operativos que genera la app (nunca se versionan)
+conciliacion.db
+reportes/
+Conciliacion_*.xlsx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
