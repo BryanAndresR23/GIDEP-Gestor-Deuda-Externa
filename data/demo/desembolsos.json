@@ -1,0 +1,62 @@
+[
+  {
+    "mensaje": "SW-IN-0001",
+    "fecha": "2026-03-16",
+    "tipo": "MT103",
+    "ordenante": "INTER-AMERICAN DEVELOPMENT BANK",
+    "referencia": "DISBURSEMENT LOAN PR-5120",
+    "monto": 3400000.0,
+    "moneda": "USD",
+    "archivado": false
+  },
+  {
+    "mensaje": "SW-IN-0002",
+    "fecha": "2026-03-16",
+    "tipo": "MT910",
+    "ordenante": "CORPORACION ANDINA DE FOMENTO",
+    "referencia": "DESEMBOLSO PRESTAMO PR-4482",
+    "monto": 1250000.0,
+    "moneda": "USD",
+    "archivado": false
+  },
+  {
+    "mensaje": "SW-IN-0003",
+    "fecha": "2026-03-16",
+    "tipo": "MT103",
+    "ordenante": "INTERNATIONAL FUND FOR AGRICULTURAL DEVELOPMENT",
+    "referencia": "IFAD DISBURSEMENT",
+    "monto": 410000.0,
+    "moneda": "EUR",
+    "archivado": false
+  },
+  {
+    "mensaje": "SW-IN-0004",
+    "fecha": "2026-03-15",
+    "tipo": "MT103",
+    "ordenante": "INTERNATIONAL BANK FOR RECONSTRUCTION AND DEVELOPMENT",
+    "referencia": "LOAN PR-3377 WITHDRAWAL",
+    "monto": 2000000.0,
+    "moneda": "USD",
+    "archivado": true
+  },
+  {
+    "mensaje": "SW-IN-0005",
+    "fecha": "2026-03-14",
+    "tipo": "MT910",
+    "ordenante": "NORDIC COOPERATION AGENCY",
+    "referencia": "CREDIT PR-6612 TRANCHE 2",
+    "monto": 650000.0,
+    "moneda": "EUR",
+    "archivado": true
+  },
+  {
+    "mensaje": "SW-IN-0006",
+    "fecha": "2026-03-13",
+    "tipo": "MT103",
+    "ordenante": "GLOBAL TRADE SUPPLIES LTD",
+    "referencia": "INVOICE 4471 PAYMENT",
+    "monto": 18200.0,
+    "moneda": "USD",
+    "archivado": true
+  }
+]

@@ -1,5 +1,6 @@
 # Datos operativos que genera la app (nunca se versionan)
 conciliacion.db
+instance/
 reportes/
 Conciliacion_*.xlsx
 

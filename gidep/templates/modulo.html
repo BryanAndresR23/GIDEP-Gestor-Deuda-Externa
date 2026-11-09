@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "_celdas.html" import tabla, kpis, reglas %}
+{% block titulo %}{{ m.titulo }}{% endblock %}
+{% block crumb %}GIDEP / {{ m.titulo }}{% endblock %}
+{% block content %}
+<h1>{{ m.titulo }}</h1>
+<p class="sub">{{ m.subtitulo }}</p>
+{% if m.acciones %}<div class="acciones">{% for a in m.acciones %}<a class="btn" href="{{ a.url }}">{{ a.etiqueta }}</a>{% endfor %}</div>{% endif %}
+{{ kpis(m.kpis) }}
+{% for sec in m.secciones %}{{ tabla(sec) }}{% endfor %}
+{{ reglas(m.reglas) }}
+{% endblock %}

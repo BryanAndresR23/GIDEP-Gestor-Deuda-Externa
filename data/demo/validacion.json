@@ -1,0 +1,191 @@
+[
+  {
+    "pago": "PG-001",
+    "prestamo": "PR-5120",
+    "acreedor": "BID",
+    "etapa": "En curso",
+    "instruccion": {
+      "monto": 1250000.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-16",
+      "beneficiario": "BID"
+    },
+    "swift": {
+      "monto": 1250000.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-16",
+      "beneficiario": "BID",
+      "corresponsal": "Atlantic Clearing Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-16",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-002",
+    "prestamo": "PR-2291",
+    "acreedor": "FIDA",
+    "etapa": "En curso",
+    "instruccion": {
+      "monto": 310480.0,
+      "moneda": "EUR",
+      "fecha_valor": "2026-03-18",
+      "beneficiario": "FIDA"
+    },
+    "swift": {
+      "monto": 310480.0,
+      "moneda": "EUR",
+      "fecha_valor": "2026-03-18",
+      "beneficiario": "FIDA",
+      "corresponsal": "Euro Meridian Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-15",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-003",
+    "prestamo": "PR-7004",
+    "acreedor": "GOBIERNOS",
+    "etapa": "Antes del pago",
+    "instruccion": {
+      "monto": 182500000,
+      "moneda": "JPY",
+      "fecha_valor": "2026-03-21",
+      "beneficiario": "GOBIERNOS"
+    },
+    "swift": {
+      "monto": 182500000,
+      "moneda": "JPY",
+      "fecha_valor": "2026-03-21",
+      "beneficiario": "GOBIERNOS",
+      "corresponsal": "Pacific Rim Banking Corp"
+    },
+    "comprobante": {
+      "fecha": "2026-03-18",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-004",
+    "prestamo": "PR-3308",
+    "acreedor": "BIRF",
+    "etapa": "Después del pago",
+    "instruccion": {
+      "monto": 845300.5,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-13",
+      "beneficiario": "BIRF"
+    },
+    "swift": {
+      "monto": 845300.05,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-13",
+      "beneficiario": "BIRF",
+      "corresponsal": "Atlantic Clearing Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-13",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-005",
+    "prestamo": "PR-1045",
+    "acreedor": "BID",
+    "etapa": "Después del pago",
+    "instruccion": {
+      "monto": 640210.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-15",
+      "beneficiario": "BID"
+    },
+    "swift": {
+      "monto": 640210.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-15",
+      "beneficiario": "BID",
+      "corresponsal": "Atlantic Clearing Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-15",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-006",
+    "prestamo": "PR-8150",
+    "acreedor": "BANCOS",
+    "etapa": "En curso",
+    "instruccion": {
+      "monto": 1005000.0,
+      "moneda": "EUR",
+      "fecha_valor": "2026-03-25",
+      "beneficiario": "BANCOS"
+    },
+    "swift": {
+      "monto": 1005000.0,
+      "moneda": "EUR",
+      "fecha_valor": "2026-03-25",
+      "beneficiario": "BANCOS",
+      "corresponsal": "Atlantic Clearing Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-23",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": false,
+    "correo_respaldo": false
+  },
+  {
+    "pago": "PG-007",
+    "prestamo": "PR-9001",
+    "acreedor": "FLAR",
+    "etapa": "Antes del pago",
+    "instruccion": {
+      "monto": 5000000.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-19",
+      "beneficiario": "FLAR"
+    },
+    "swift": {
+      "monto": 5000000.0,
+      "moneda": "USD",
+      "fecha_valor": "2026-03-19",
+      "beneficiario": "FLAR",
+      "corresponsal": "Atlantic Clearing Bank"
+    },
+    "comprobante": {
+      "fecha": "2026-03-19",
+      "cuenta_debito": "1100-0099",
+      "comision": 50.0,
+      "cuenta_comision": "2190-0450"
+    },
+    "fecha_valor_cambio": true,
+    "correo_respaldo": false
+  }
+]

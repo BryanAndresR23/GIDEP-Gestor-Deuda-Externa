@@ -1,0 +1,50 @@
+[
+  {
+    "archivo": "Oficio_MF-SFP-2026-0131-O.pdf",
+    "lote": "lote-1",
+    "texto": "OFICIO MF-SFP-2026-0131-O. Asunto: pago de intereses de deuda externa pública, préstamo PR-5120. Fecha valor 2026-03-16. Monto USD 1,250,000.00.",
+    "historico": false
+  },
+  {
+    "archivo": "estado_cuenta_marzo.pdf",
+    "lote": "lote-1",
+    "texto": "ESTADO DE CUENTA del acreedor al 2026-03-16. Saldo adeudado.",
+    "historico": false
+  },
+  {
+    "archivo": "formulario_giro.pdf",
+    "lote": "lote-1",
+    "texto": "FORMULARIO DE TRANSFERENCIA AL EXTERIOR. Beneficiario BID.",
+    "historico": false
+  },
+  {
+    "archivo": "Oficio_MF-SFP-2026-0144-O.pdf",
+    "lote": "lote-2",
+    "texto": "OFICIO MF-SFP-2026-0144-O. Deuda externa pública: transferencia de capital, identificador DX-100229. Fecha valor 2026-03-18.",
+    "historico": false
+  },
+  {
+    "archivo": "Memorando_capacitacion.pdf",
+    "lote": "lote-3",
+    "texto": "MEMORANDO. Asunto: capacitación interna de seguridad de la información.",
+    "historico": false
+  },
+  {
+    "archivo": "Oficio_MF-SFP-2026-0150-O.pdf",
+    "lote": "lote-4",
+    "texto": "OFICIO MF-SFP-2026-0150-O. Deuda externa pública: pago de amortización. Préstamo por confirmar.",
+    "historico": false
+  },
+  {
+    "archivo": "estado_cuenta_feb.pdf",
+    "lote": "historico",
+    "texto": "ESTADO DE CUENTA del acreedor al 2026-02-27.",
+    "historico": true
+  },
+  {
+    "archivo": "Oficio_MF-SFP-2026-0131-O (1).pdf",
+    "lote": "lote-5",
+    "texto": "OFICIO MF-SFP-2026-0131-O. Asunto: pago de intereses de deuda externa pública, préstamo PR-5120. Fecha valor 2026-03-16. Monto USD 1,250,000.00.",
+    "historico": false
+  }
+]

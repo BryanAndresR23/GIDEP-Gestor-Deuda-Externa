@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "_celdas.html" import tabla, celda %}
+{% block titulo %}Matriz de Préstamos{% endblock %}
+{% block crumb %}GIDEP / Matriz de Préstamos Realizados{% endblock %}
+{% block content %}
+<h1>Matriz de Préstamos Realizados</h1>
+<p class="sub">Registra cada giro leyendo la pantalla del sistema de giros. En el gestor real se pega una captura y se lee
+  con OCR en el propio equipo; en esta demo se pega el texto. La fila solo se agrega cuando todas las verificaciones están en verde.</p>
+<div class="grid2">
+  <form class="card" method="post">
+    <h2 style="font-size:15px;margin-top:0">1. Pantalla del sistema de giros</h2>
+    <textarea name="texto" placeholder="Pega aquí el texto de la pantalla «Giros al Exterior»">{{ texto }}</textarea>
+    <p style="margin-top:12px">
+      <button class="btn" name="accion" value="analizar">Analizar</button>
+      <button class="btn teal" name="accion" value="agregar">Agregar a la matriz</button>
+      <a class="btn alt" href="/matriz?ejemplo=1">Cargar ejemplo</a>
+    </p>
+  </form>
+  <div class="card">
+    <h2 style="font-size:15px;margin-top:0">2. Verificaciones</h2>
+    {% if agregado is not none %}<div class="flash" style="{{ 'background:var(--ok-bg);color:var(--ok)' if agregado }}">
+      {{ 'Fila agregada a la matriz con respaldo automático.' if agregado else 'No se agregó: hay verificaciones en rojo.' }}</div>{% endif %}
+    {% if checks %}
+    <table><thead><tr><th>Verificación</th><th>Detalle</th><th>Resultado</th></tr></thead>
+      <tbody>{% for fila in checks %}<tr>{% for v in fila %}<td>{{ celda(v) }}</td>{% endfor %}</tr>{% endfor %}</tbody></table>
+    {% else %}<p class="vacio">Pega el texto de una operación o carga el ejemplo para comenzar.</p>{% endif %}
+  </div>
+</div>
+<div style="margin-top:16px">{{ tabla(tabla_matriz) }}</div>
+{% endblock %}

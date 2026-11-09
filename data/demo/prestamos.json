@@ -1,0 +1,80 @@
+[
+  {
+    "prestamo": "PR-4417",
+    "id_deuda": "DX-100417",
+    "acreedor": "CAF",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-4460",
+    "id_deuda": "DX-100446",
+    "acreedor": "CAF",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-4482",
+    "id_deuda": "DX-100448",
+    "acreedor": "CAF",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-5120",
+    "id_deuda": "DX-100512",
+    "acreedor": "BID",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-1045",
+    "id_deuda": "DX-100104",
+    "acreedor": "BID",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-3308",
+    "id_deuda": "DX-100330",
+    "acreedor": "BIRF",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-3377",
+    "id_deuda": "DX-100337",
+    "acreedor": "BIRF",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-2291",
+    "id_deuda": "DX-100229",
+    "acreedor": "FIDA",
+    "moneda": "EUR"
+  },
+  {
+    "prestamo": "PR-9001",
+    "id_deuda": "DX-100900",
+    "acreedor": "FLAR",
+    "moneda": "USD"
+  },
+  {
+    "prestamo": "PR-7004",
+    "id_deuda": "DX-100700",
+    "acreedor": "GOBIERNOS",
+    "moneda": "JPY"
+  },
+  {
+    "prestamo": "PR-6612",
+    "id_deuda": "DX-100661",
+    "acreedor": "GOBIERNOS",
+    "moneda": "EUR"
+  },
+  {
+    "prestamo": "PR-8150",
+    "id_deuda": "DX-100815",
+    "acreedor": "BANCOS",
+    "moneda": "EUR"
+  },
+  {
+    "prestamo": "BONO-2030",
+    "id_deuda": "DX-102030",
+    "acreedor": "BONOS",
+    "moneda": "USD"
+  }
+]

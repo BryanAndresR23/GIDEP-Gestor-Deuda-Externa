@@ -1,0 +1,20 @@
+[
+  {
+    "usuario": "demo",
+    "nombre": "Usuario Demo",
+    "perfil": "Analista",
+    "hash": "scrypt:32768:8:1$rObaIZW0zoguDF1M$ca6a1b8c50e08a62674b5fb081dc8d518b7c2df84a493ffd491888e73310a7e74886ef7c9059a734b3f27b2170654f4aa2caff78d3d38ef046c8ec5bb4b79bd9"
+  },
+  {
+    "usuario": "supervisor",
+    "nombre": "Supervisora Demo",
+    "perfil": "Supervisor",
+    "hash": "scrypt:32768:8:1$Ey0STaMgB3Lmjhnm$9d1eb35cf6729f65496fcf736e671ff95ff129eab0a15d82d3cd8f2fd8cc522295e88803d438a0b5cba93607652f3902d144bc3b5185b40a4fefe345fcbf0c83"
+  },
+  {
+    "usuario": "admin",
+    "nombre": "Administrador Demo",
+    "perfil": "Administrador",
+    "hash": "scrypt:32768:8:1$DvMuVmpPqCNKi352$6587c5b88d92bfb76630995061f6939dda9fbcb0a45ad22e73ca27cfa34d0df0720da0709d3bf0f506b85e279856bc10d261f278f710faca619198fd14c9d191"
+  }
+]

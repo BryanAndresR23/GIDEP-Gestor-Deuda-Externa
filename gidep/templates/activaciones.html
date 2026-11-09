@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %}Activaciones de Cuentas{% endblock %}
+{% block crumb %}GIDEP / Activaciones de Cuentas{% endblock %}
+{% block content %}
+<h1>Activaciones de Cuentas</h1>
+<p class="sub">Valida la estructura de la cuenta del beneficiario antes de usarla en un mensaje de pago y muestra dónde va
+  el dato en ISO 20022: IBAN, ABA Routing, CLABE, Transit de Canadá y BSB de Australia.</p>
+<div class="grid2">
+  <form class="card" method="post">
+    <label style="font-size:12px;font-weight:600;color:var(--muted)">Tipo de cuenta</label>
+    <select name="tipo">{% for clave, nombre in tipos.items() %}<option value="{{ clave }}" {{ 'selected' if clave == tipo }}>{{ nombre }}</option>{% endfor %}</select>
+    <label style="font-size:12px;font-weight:600;color:var(--muted);display:block;margin-top:12px">Número</label>
+    <input type="text" name="valor" value="{{ valor }}" placeholder="Ej. DE89 3704 0044 0532 0130 00">
+    <p style="margin-top:14px"><button class="btn">Validar</button></p>
+    <p class="nota">Ejemplos:
+      {% for clave, lista in ejemplos.items() %}{% for e in lista %}
+        <a href="/activaciones?tipo={{ clave }}&valor={{ e|urlencode }}">{{ clave }} {{ 'válido' if loop.first else 'con error' }}</a>&nbsp;
+      {% endfor %}{% endfor %}</p>
+  </form>
+  <div class="card">
+    {% if r %}
+      <h2 style="font-size:15px;margin-top:0">{{ r.valor }} <span class="chip {{ 'ok' if r.valida else 'bad' }}">{{ 'Estructura válida' if r.valida else 'Con errores' }}</span></h2>
+      <table><thead><tr><th>Control</th><th>Resultado</th></tr></thead>
+        <tbody>{% for nombre, ok in r.checks %}<tr><td>{{ nombre }}</td><td><span class="chip {{ 'ok' if ok else 'bad' }}">{{ 'OK' if ok else 'Falla' }}</span></td></tr>{% endfor %}</tbody></table>
+      <p class="nota"><b>ISO 20022 (pacs.008):</b> {{ r.iso20022 }}</p>
+    {% else %}<p class="vacio">Ingresa un número o usa uno de los ejemplos.</p>{% endif %}
+  </div>
+</div>
+<div class="reglas" style="margin-top:16px"><h2>Reglas que aplica este apartado</h2><ul>
+  <li>IBAN: longitud según el país y dígito de control ISO 7064 (mod 97).</li>
+  <li>ABA Routing: 9 dígitos con suma ponderada 3-7-1 múltiplo de 10.</li>
+  <li>CLABE: 18 dígitos y dígito de control con pesos 3-7-1.</li>
+  <li>Transit de Canadá: tránsito de 5 dígitos + institución de 3, o formato electrónico 0YYYXXXXX. BSB de Australia: 6 dígitos.</li>
+</ul></div>
+{% endblock %}

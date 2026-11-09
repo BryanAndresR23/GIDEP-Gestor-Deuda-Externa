@@ -1,0 +1,50 @@
+[
+  {
+    "mensaje": "SW-FMI-001",
+    "fecha": "2026-03-16",
+    "tipo": "MT298",
+    "texto": "GRA CHARGES AND INTEREST PERIOD ENDING 31 JAN 2026"
+  },
+  {
+    "mensaje": "SW-FMI-002",
+    "fecha": "2026-03-16",
+    "tipo": "MT202",
+    "texto": "REPURCHASE PRINCIPAL EFF ARRANGEMENT"
+  },
+  {
+    "mensaje": "SW-FMI-003",
+    "fecha": "2026-03-15",
+    "tipo": "MT298",
+    "texto": "SDR REMUNERATION QUARTER 4 2025"
+  },
+  {
+    "mensaje": "SW-FMI-004",
+    "fecha": "2026-03-14",
+    "tipo": "MT298",
+    "texto": "COMMITMENT FEE EXTENDED FUND FACILITY"
+  },
+  {
+    "mensaje": "SW-FMI-005",
+    "fecha": "2026-03-12",
+    "tipo": "MT298",
+    "texto": "SDR ALLOCATION CHARGES Q4 2025"
+  },
+  {
+    "mensaje": "SW-FMI-006",
+    "fecha": "2026-03-10",
+    "tipo": "MT298",
+    "texto": "ANNUAL ASSESSMENT FEE SDR DEPARTMENT"
+  },
+  {
+    "mensaje": "SW-FMI-007",
+    "fecha": "2026-03-09",
+    "tipo": "MT950",
+    "texto": "STATEMENT OF ACCOUNT NO REFERENCE"
+  },
+  {
+    "mensaje": "SW-FMI-008",
+    "fecha": "2026-03-07",
+    "tipo": "MT298",
+    "texto": "HOLIDAY NOTICE 03 APR 2026 MARKETS CLOSED"
+  }
+]

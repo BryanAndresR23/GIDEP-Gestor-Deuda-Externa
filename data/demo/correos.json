@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "asunto": "Confirmación de pago de intereses",
+    "correo": "Solicitamos confirmar si se realizó el pago de intereses del préstamo con fecha valor de hoy.",
+    "respuesta": "Estimados: confirmamos que el pago de intereses fue procesado con la fecha valor indicada. Adjuntamos el mensaje Swift y el comprobante contable como respaldo. Saludos cordiales.",
+    "usos": 7
+  },
+  {
+    "id": 2,
+    "asunto": "Cambio de fecha valor",
+    "correo": "El acreedor informa que la fecha valor del pago cambia al siguiente día hábil.",
+    "respuesta": "Estimados: tomamos nota del cambio de fecha valor. Para proceder necesitamos el oficio o correo oficial que respalde la nueva fecha; con ese documento actualizamos la programación del pago.",
+    "usos": 4
+  },
+  {
+    "id": 3,
+    "asunto": "Solicitud de estado de cuenta",
+    "correo": "Requerimos el estado de cuenta actualizado del préstamo para la conciliación mensual.",
+    "respuesta": "Estimados: adjuntamos el estado de cuenta solicitado con corte al último día hábil del mes. Quedamos atentos a cualquier observación.",
+    "usos": 5
+  },
+  {
+    "id": 4,
+    "asunto": "Diferencia en conciliación",
+    "correo": "Existe una diferencia entre el reporte del Banco Central y el del Ministerio en desembolsos.",
+    "respuesta": "Estimados: la diferencia corresponde a un desembolso pagado de forma directa al proveedor, que no pasó por el Banco Central. Agradeceremos remitir el respaldo para registrar el ajuste.",
+    "usos": 3
+  },
+  {
+    "id": 5,
+    "asunto": "Datos de cuenta del beneficiario",
+    "correo": "Por favor validar los datos de la cuenta del beneficiario antes del giro.",
+    "respuesta": "Estimados: validamos la estructura de la cuenta (IBAN y BIC) y es correcta. Procedemos con el giro en la fecha valor instruida.",
+    "usos": 2
+  },
+  {
+    "id": 6,
+    "asunto": "Mensaje pendiente de segunda firma",
+    "correo": "El mensaje de pago está pendiente de la segunda firma.",
+    "respuesta": "Estimados: el mensaje fue enviado a la segunda firma; una vez firmado lo trasladamos a la carpeta del día y confirmamos su envío.",
+    "usos": 1
+  }
+]

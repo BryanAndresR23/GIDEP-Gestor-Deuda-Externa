@@ -1,0 +1,10 @@
+SISTEMA DE GIROS - GIROS AL EXTERIOR
+Referencia: TF-02611
+Préstamo: PR-1045
+Acreedor: BID
+Fecha valor: 2026-03-15
+Moneda: USD
+Monto: 640210.00
+Tipo de cambio: 1.000000
+Monto USD: 640210.00
+Corresponsal: Atlantic Clearing Bank

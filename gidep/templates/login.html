@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sesión · GIDEP demo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='gidep.css') }}">
+</head>
+<body class="login">
+  <form class="panel" method="post">
+    <div class="brand"><div class="logo">GD</div><div><b style="color:var(--navy)">GIDEP</b><small style="color:var(--muted)">Gestor Integral de Deuda Externa · demo</small></div></div>
+    <h1 style="font-size:19px;margin-top:6px">Iniciar sesión</h1>
+    {% if error %}<div class="flash">{{ error }}</div>{% endif %}
+    <label for="usuario">Usuario</label><input type="text" id="usuario" name="usuario" autocomplete="username" autofocus>
+    <label for="clave">Contraseña</label><input type="password" id="clave" name="clave" autocomplete="current-password">
+    <p style="margin-top:18px"><button class="btn" style="width:100%">Ingresar</button></p>
+    <p class="nota">Demo pública con datos ficticios. Usuario <b>demo</b> · contraseña <b>gidep-demo</b>
+      (también <b>supervisor</b> y <b>admin</b>). Las contraseñas se verifican contra un hash.</p>
+  </form>
+</body>
+</html>

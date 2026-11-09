@@ -1,0 +1,32 @@
+{
+  "periodo": "2026-03",
+  "gad": [
+    {
+      "gad": "GAD Municipal de Río Claro",
+      "prestamo": "PR-4417",
+      "fuente": "Tabla del convenio",
+      "monto": 48750.0,
+      "cuenta_gad": "GAD-0001-RC",
+      "oficio_firmado": true,
+      "comprobante_archivado": true
+    },
+    {
+      "gad": "GAD Municipal de Puerto Alto",
+      "prestamo": "PR-4460",
+      "fuente": "Oficio del GAD",
+      "monto": 112300.4,
+      "cuenta_gad": "GAD-0002-PA",
+      "oficio_firmado": true,
+      "comprobante_archivado": false
+    },
+    {
+      "gad": "GAD Municipal de Valle Verde",
+      "prestamo": "PR-4482",
+      "fuente": "Oficio del GAD",
+      "monto": null,
+      "cuenta_gad": "GAD-0003-VV",
+      "oficio_firmado": false,
+      "comprobante_archivado": false
+    }
+  ]
+}

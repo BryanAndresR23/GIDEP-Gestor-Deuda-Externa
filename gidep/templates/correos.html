@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block titulo %}Análisis de Correos{% endblock %}
+{% block crumb %}GIDEP / Análisis de Correos{% endblock %}
+{% block content %}
+<h1>Análisis de respuestas de correos</h1>
+<p class="sub">Sugiere una respuesta a partir de ejemplos ya aprobados. No inventa criterios y no envía el contenido a
+  servicios externos: todo se procesa en el equipo. Cada respuesta aprobada se guarda como nuevo ejemplo.</p>
+<div class="grid2">
+  <form class="card" method="post">
+    <h2 style="font-size:15px;margin-top:0">1. Correo recibido</h2>
+    <textarea name="correo" placeholder="Pega el correo recibido">{{ correo or 'Buenos días, el acreedor nos informa que la fecha valor del pago de intereses se mueve al siguiente día hábil. ¿Cómo procedemos?' }}</textarea>
+    <p style="margin-top:12px"><button class="btn">Sugerir respuesta</button></p>
+  </form>
+  <form class="card" method="post">
+    <h2 style="font-size:15px;margin-top:0">2. Borrador sugerido</h2>
+    {% if s %}
+      <p class="nota" style="margin-top:0">Basado en «{{ s.ejemplo.asunto }}» · similitud {{ s.similitud }} %
+        {% for a in s.alternativas %} · también «{{ a.asunto }}» ({{ a.similitud }} %){% endfor %}</p>
+      <input type="hidden" name="accion" value="aprobar"><input type="hidden" name="correo" value="{{ correo }}">
+      <input type="hidden" name="ejemplo_id" value="{{ s.ejemplo.id }}">
+      <input type="text" name="asunto" value="{{ s.ejemplo.asunto }}">
+      <textarea name="respuesta" style="margin-top:8px">{{ s.ejemplo.respuesta }}</textarea>
+      <p style="margin-top:12px"><button class="btn teal">Aprobar y guardar como ejemplo</button></p>
+    {% elif correo %}<p class="vacio">No hay un ejemplo suficientemente parecido. Redacta la respuesta y apruébala para que el asistente aprenda.</p>
+    {% else %}<p class="vacio">Pega un correo y pide una sugerencia.</p>{% endif %}
+  </form>
+</div>
+<div class="card sec" style="margin-top:16px">
+  <h2>Base de ejemplos aprobados</h2>
+  <div class="scroll"><table><thead><tr><th>Asunto</th><th>Correo de ejemplo</th><th>Veces usado</th></tr></thead>
+    <tbody>{% for e in base %}<tr><td><b>{{ e.asunto }}</b></td><td>{{ e.correo }}</td><td class="n">{{ e.usos }}</td></tr>{% endfor %}</tbody></table></div>
+</div>
+{% endblock %}

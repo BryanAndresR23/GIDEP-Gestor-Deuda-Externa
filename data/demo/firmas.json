@@ -1,0 +1,58 @@
+[
+  {
+    "flujo": "Firma Deuda Externa",
+    "archivo": "MT103_PR-5120.pdf",
+    "firmas": 1,
+    "fecha": "2026-03-16",
+    "destino": "none"
+  },
+  {
+    "flujo": "Firma Deuda Externa",
+    "archivo": "MT103_PR-3308.pdf",
+    "firmas": 2,
+    "fecha": "2026-03-15",
+    "destino": "none"
+  },
+  {
+    "flujo": "Firma Deuda Externa",
+    "archivo": "MT202_PR-2291.pdf",
+    "firmas": 2,
+    "fecha": "2026-03-16",
+    "destino": "same"
+  },
+  {
+    "flujo": "Firma Deuda Externa",
+    "archivo": "MT103_PR-4417.pdf",
+    "firmas": 1,
+    "fecha": "2026-03-15",
+    "destino": "none"
+  },
+  {
+    "flujo": "Firmas Automáticos",
+    "archivo": "AUTO_REPORTE_DIARIO.pdf",
+    "firmas": 2,
+    "fecha": "2026-03-16",
+    "destino": "different"
+  },
+  {
+    "flujo": "Firmas Automáticos",
+    "archivo": "AUTO_LIQUIDACION_0316.pdf",
+    "firmas": 2,
+    "fecha": "2026-03-15",
+    "destino": "none"
+  },
+  {
+    "flujo": "Firma Bancos",
+    "archivo": "BANCOS_MT199_0316.pdf",
+    "firmas": 1,
+    "fecha": "2026-03-16",
+    "destino": "none"
+  },
+  {
+    "flujo": "Firma Bancos",
+    "archivo": "BANCOS_MT202_0315.pdf",
+    "firmas": 2,
+    "fecha": "2026-03-15",
+    "destino": "same"
+  }
+]

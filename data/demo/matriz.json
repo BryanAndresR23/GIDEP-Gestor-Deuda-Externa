@@ -1,0 +1,26 @@
+[
+  {
+    "referencia": "TF-02601",
+    "prestamo": "PR-1045",
+    "acreedor": "BID",
+    "fecha_valor": "2026-03-06",
+    "moneda": "USD",
+    "monto": 414415.79
+  },
+  {
+    "referencia": "TF-02602",
+    "prestamo": "PR-3377",
+    "acreedor": "BIRF",
+    "fecha_valor": "2026-02-24",
+    "moneda": "USD",
+    "monto": 1104528.36
+  },
+  {
+    "referencia": "TF-02603",
+    "prestamo": "PR-6612",
+    "acreedor": "GOBIERNOS",
+    "fecha_valor": "2026-02-14",
+    "moneda": "EUR",
+    "monto": 1121280.88
+  }
+]

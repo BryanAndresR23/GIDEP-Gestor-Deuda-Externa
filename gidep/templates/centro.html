@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "_celdas.html" import celda %}
+{% block titulo %}Centro de Control{% endblock %}
+{% block crumb %}GIDEP / Centro de Control{% endblock %}
+{% block content %}
+<h1>Centro de Control Diario</h1>
+<p class="sub">Consolida los pendientes y alertas de todos los monitores del gestor. Cada alerta lleva al apartado
+  responsable · última lectura {{ lectura }}.</p>
+<div class="grid2">
+  <div class="card sec">
+    <h2>Alertas de hoy</h2>
+    {% for a in alertas %}
+    <div class="alerta"><div><b>{{ a.nombre }}</b><br><span style="color:var(--muted)">{{ a.texto }}</span></div>
+      <a class="chip {{ a.tono if a.cuenta else 'ok' }}" href="/modulo/{{ a.modulo }}">{{ a.cuenta if a.cuenta else 'Al día' }}</a></div>
+    {% endfor %}
+  </div>
+  <div class="card sec">
+    <h2>Pagos de la Agenda Diaria</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>Préstamo</th><th>Acreedor</th><th>Fecha</th><th>Estado</th></tr></thead>
+      <tbody>{% for p in agenda[:8] %}<tr><td>{{ p.prestamo or '—' }}</td><td>{{ p.acreedor }}</td>
+        <td>{{ p.fecha_op.strftime('%d-%m-%Y') }}</td><td><span class="chip {{ {'Para hoy':'warn','En proceso':'info','Vencido':'bad','Procesado':'ok','Programado':'muted','Por revisar':'warn'}[p.estado] }}">{{ p.estado }}</span></td></tr>{% endfor %}</tbody>
+    </table></div>
+    <p style="margin-top:12px"><a class="btn alt" href="/modulo/agenda">Ver la agenda completa</a></p>
+  </div>
+</div>
+<div class="reglas"><h2>Cómo funciona el gestor</h2><ul>
+  <li>Cada apartado tiene sus propias reglas, pantallas y controles; todos comparten el mismo inicio de sesión.</li>
+  <li>Los monitores (agenda, firmas, desembolsos, FMI, comprobantes, archivo) se revisan cada cinco minutos en la versión real.</li>
+  <li>Nada se archiva por suposición: lo que no tiene evidencia suficiente queda en revisión.</li>
+</ul></div>
+{% endblock %}

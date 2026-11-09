@@ -1,0 +1,26 @@
+{% macro celda(v) -%}
+  {%- if v is mapping and v.chip is defined -%}<span class="chip {{ v.tono }}">{{ v.chip }}</span>
+  {%- else -%}{{ v }}{%- endif -%}
+{%- endmacro %}
+
+{% macro tabla(sec) -%}
+<div class="card sec">
+  <h2>{{ sec.titulo }}</h2>
+  {% if sec.nota %}<p class="sub">{{ sec.nota }}</p>{% endif %}
+  <div class="scroll"><table>
+    <thead><tr>{% for c in sec.columnas %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for fila in sec.filas %}<tr>{% for v in fila %}<td>{{ celda(v) }}</td>{% endfor %}</tr>{% else %}
+      <tr><td colspan="{{ sec.columnas|length }}" class="vacio">Sin registros.</td></tr>{% endfor %}
+    </tbody>
+  </table></div>
+</div>
+{%- endmacro %}
+
+{% macro kpis(lista) -%}
+<div class="kpis">{% for k in lista %}<div class="card kpi {{ k.tono }}"><div class="v">{{ k.valor }}</div><div class="l">{{ k.etiqueta }}</div></div>{% endfor %}</div>
+{%- endmacro %}
+
+{% macro reglas(lista) -%}
+{% if lista %}<div class="reglas"><h2>Reglas que aplica este apartado</h2><ul>{% for r in lista %}<li>{{ r }}</li>{% endfor %}</ul></div>{% endif %}
+{%- endmacro %}

@@ -1,0 +1,21 @@
+{
+  "periodo": "2026-03",
+  "valor_reporte_banco": 22904.83,
+  "estados_cuenta": [
+    {
+      "prestamo": "PR-4417",
+      "archivo": "Estado_cuenta_PR-4417_Mar2026.pdf",
+      "interes_condonado_usd": 10307.17
+    },
+    {
+      "prestamo": "PR-4460",
+      "archivo": "Estado_cuenta_PR-4460_Mar2026.pdf",
+      "interes_condonado_usd": 8016.69
+    },
+    {
+      "prestamo": "PR-4482",
+      "archivo": "Estado_cuenta_PR-4482_Mar2026.pdf",
+      "interes_condonado_usd": 4580.97
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "CC-2026-00141.pdf",
+    "responsable": "Analista 1",
+    "prestamo": "PR-1045",
+    "oficio": "MF-SFP-2026-0107-O",
+    "ref": "TF-02611",
+    "fecha_valor": "2026-03-15",
+    "monto": 640210.0,
+    "moneda": "USD",
+    "transferencia_interna": false,
+    "texto": ""
+  },
+  {
+    "archivo": "CC-2026-00142.pdf",
+    "responsable": "Analista 2",
+    "prestamo": "PR-3308",
+    "oficio": "MF-SFP-2026-0102-O",
+    "ref": "TF-02612",
+    "fecha_valor": "2026-03-13",
+    "monto": 845300.5,
+    "moneda": "USD",
+    "transferencia_interna": false,
+    "texto": ""
+  },
+  {
+    "archivo": "CC-2026-00143.pdf",
+    "responsable": "Analista 1",
+    "prestamo": "PR-2291",
+    "oficio": "MF-SFP-2026-0103-O",
+    "ref": "GS-00410",
+    "fecha_valor": "2026-03-16",
+    "monto": 310480.0,
+    "moneda": "EUR",
+    "transferencia_interna": false,
+    "texto": ""
+  },
+  {
+    "archivo": "CC-2026-00144.pdf",
+    "responsable": "Analista 2",
+    "prestamo": "PR-4460",
+    "oficio": null,
+    "ref": "TF-02615",
+    "fecha_valor": "2026-03-16",
+    "monto": 920000.0,
+    "moneda": "USD",
+    "transferencia_interna": false,
+    "texto": ""
+  },
+  {
+    "archivo": "CC-2026-00145.pdf",
+    "responsable": "Analista 1",
+    "prestamo": "PR-9001",
+    "oficio": "MF-SFP-2026-0104-O",
+    "ref": "NC-00077",
+    "fecha_valor": "2026-03-16",
+    "monto": 5000000.0,
+    "moneda": "USD",
+    "transferencia_interna": true,
+    "texto": "DTR100 NC-01 PR-9001"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "ACK_TF-02611.pdf",
+    "ref": "TF-02611",
+    "fecha": "2026-03-15",
+    "monto": 640210.0,
+    "moneda": "USD",
+    "prestamo": "PR-1045"
+  },
+  {
+    "archivo": "ACK_TF-02612.pdf",
+    "ref": "TF-02612",
+    "fecha": "2026-03-13",
+    "monto": 845300.5,
+    "moneda": "USD",
+    "prestamo": null
+  },
+  {
+    "archivo": "ACK_GS-00410.pdf",
+    "ref": "GS-00410",
+    "fecha": "2026-03-17",
+    "monto": 310480.0,
+    "moneda": "EUR",
+    "prestamo": "PR-2291"
+  },
+  {
+    "archivo": "ACK_TF-02699.pdf",
+    "ref": "TF-02699",
+    "fecha": "2026-03-16",
+    "monto": 920000.0,
+    "moneda": "USD",
+    "prestamo": null
+  }
+]

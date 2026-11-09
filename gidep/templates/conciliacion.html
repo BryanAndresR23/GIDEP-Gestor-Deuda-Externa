@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block titulo %}Conciliación de Deuda{% endblock %}
+{% block crumb %}GIDEP / Conciliación de Deuda Externa{% endblock %}
+{% block content %}
+{% macro monto(v) %}{{ "{:,.2f}".format(v).replace(",", "X").replace(".", ",").replace("X", ".") }}{% endmacro %}
+<h1>Conciliación de Deuda Externa</h1>
+<p class="sub">Compara el reporte del Banco Central con el del Ministerio por periodo, acreedor y concepto
+  (tolerancia USD {{ '%.2f' % tolerancia }}), explica las diferencias y prepara el oficio de respuesta.</p>
+<div class="tabs">
+  {% for clave, nombre in [('recepcion', '1. Recepción de reportes'), ('carteras', '2. Conciliación de carteras'),
+                           ('observaciones', '3. Gestión de observaciones'), ('oficio', '4. Emisión del oficio')] %}
+  <a href="/conciliacion?tab={{ clave }}" class="{{ 'on' if tab == clave }}">{{ nombre }}</a>{% endfor %}
+</div>
+
+{% if tab == 'recepcion' or not res %}
+  {% if not res and tab != 'recepcion' %}<div class="flash">Regla de sesión: las vistas de carteras, observaciones y oficio
+    permanecen vacías hasta que proceses dos reportes nuevos en esta sesión.</div>{% endif %}
+  <div class="grid2">
+    <form class="card" method="post" enctype="multipart/form-data">
+      <h2 style="font-size:15px;margin-top:0">Subir los reportes del mes</h2>
+      <p class="sub">Selecciona los dos archivos (.xlsx) en cualquier orden: la app reconoce cuál es del Banco y cuál del Ministerio.</p>
+      <input type="file" name="archivos" accept=".xlsx" multiple>
+      <p style="margin-top:14px"><button class="btn">Conciliar</button></p>
+    </form>
+    <form class="card" method="post">
+      <h2 style="font-size:15px;margin-top:0">¿Solo quieres verla funcionar?</h2>
+      <p class="sub">Usa los reportes ficticios de marzo 2026, que traen tres diferencias sembradas: un pago directo,
+        un diferencial cambiario y un desfase de fecha.</p>
+      <input type="hidden" name="ejemplo" value="1"><button class="btn teal">Usar reportes de ejemplo</button>
+    </form>
+  </div>
+{% elif tab == 'carteras' %}
+  {% set s = res.resumen %}
+  <div class="kpis">
+    <div class="card kpi ok"><div class="v">{{ s.conciliados }}</div><div class="l">Rubros conciliados</div></div>
+    <div class="card kpi {{ 'bad' if s.diferencias else 'ok' }}"><div class="v">{{ s.diferencias }}</div><div class="l">Rubros con diferencia</div></div>
+    <div class="card kpi info"><div class="v">{{ monto(s.total_ministerio / 1e6) }} M</div><div class="l">Total Ministerio (USD)</div></div>
+    <div class="card kpi info"><div class="v">{{ monto(s.total_banco / 1e6) }} M</div><div class="l">Total Banco Central (USD)</div></div>
+  </div>
+  <div class="card sec">
+    <div class="acciones" style="justify-content:space-between;align-items:center">
+      <h2 style="margin:0">Periodo {{ res.periodo }}</h2>
+      <div><a class="btn alt" href="/conciliacion?tab=carteras{{ '' if solo else '&solo=1' }}">{{ 'Ver todo' if solo else 'Solo diferencias' }}</a>
+        <a class="btn" href="/conciliacion/exportar">Exportar a Excel</a></div>
+    </div>
+    <div class="scroll"><table>
+      <thead><tr><th>Acreedor / concepto</th><th class="n">Ministerio</th><th class="n">Banco Central</th><th class="n">Diferencia</th><th>Estado</th></tr></thead>
+      <tbody>
+      {% set ns = namespace(previo=None) %}
+      {% for f in res.filas if not solo or f.estado == 'DIFERENCIA' %}
+        {% if f.acreedor != ns.previo %}<tr class="grupo"><td colspan="5">{{ f.acreedor }}</td></tr>{% set ns.previo = f.acreedor %}{% endif %}
+        <tr><td>&nbsp;&nbsp;{{ f.concepto }}</td><td class="n">{{ monto(f.ministerio) }}</td><td class="n">{{ monto(f.banco) }}</td>
+          <td class="n">{{ monto(f.diferencia) }}</td>
+          <td><span class="chip {{ 'ok' if f.estado == 'CONCILIADO' else 'bad' }}">{{ 'Conciliado' if f.estado == 'CONCILIADO' else 'Diferencia' }}</span></td></tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+  </div>
+{% elif tab == 'observaciones' %}
+  {% if res.diagnostico %}
+  <div class="diag">{% for d in res.diagnostico %}
+    <div class="card"><div class="tipo">{{ d.tipo }}</div>
+      <h3>{{ d.acreedor }} · {% for k, v in d.rubros.items() %}{{ k }} {{ monto(v) }}{% if not loop.last %}, {% endif %}{% endfor %}</h3>
+      {% if d.observacion %}<p><i>“{{ d.observacion }}”</i></p>{% endif %}
+      <p>{{ d.por_que }}</p><p><b>Acción:</b> {{ d.accion }}</p></div>{% endfor %}
+  </div>
+  {% else %}<div class="card vacio">No hay diferencias que explicar en este periodo.</div>{% endif %}
+{% elif tab == 'oficio' %}
+  <p class="sub">Borrador generado a partir del resultado; se revisa y se envía por el sistema documental.</p>
+  <div class="oficio">{{ oficio }}</div>
+{% endif %}
+{% endblock %}

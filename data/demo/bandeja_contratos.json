@@ -1,0 +1,44 @@
+[
+  {
+    "archivo": "BC-OF-2026-0712.pdf",
+    "encabezado": "OFICIO",
+    "asunto": "Contrato de Agencia Fiscal - Envío Borrador Contrato",
+    "firma_final": true,
+    "texto": "Ref. contrato CAF-CT-2026-01, préstamo PR-4482."
+  },
+  {
+    "archivo": "BC-OF-2026-0716.pdf",
+    "encabezado": "OFICIO",
+    "asunto": "Contrato de Agencia Fiscal - Envío Contrato Firmado",
+    "firma_final": true,
+    "texto": "Ref. contrato BID-CT-2026-03, préstamo PR-5120."
+  },
+  {
+    "archivo": "BC-OF-2026-0721.pdf",
+    "encabezado": "OFICIO",
+    "asunto": "Contrato de Agencia Fiscal - Correcciones",
+    "firma_final": false,
+    "texto": "Ref. contrato BIRF-CT-2026-02."
+  },
+  {
+    "archivo": "BC-OF-2026-0725-TEMP.pdf",
+    "encabezado": "OFICIO",
+    "asunto": "Contrato de Agencia Fiscal - Revisión",
+    "firma_final": true,
+    "texto": "Ref. contrato CAF-CT-2026-01."
+  },
+  {
+    "archivo": "BC-MEM-2026-0098.pdf",
+    "encabezado": "MEMORANDO",
+    "asunto": "Contrato de Agencia Fiscal - Revisión",
+    "firma_final": true,
+    "texto": "Ref. contrato BID-CT-2026-03."
+  },
+  {
+    "archivo": "BC-OF-2026-0730.pdf",
+    "encabezado": "OFICIO",
+    "asunto": "Contrato de Agencia Fiscal - Suscripción Contrato",
+    "firma_final": true,
+    "texto": "Acreedor CAF, beneficiario municipio; sin referencia contractual."
+  }
+]
