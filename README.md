@@ -105,4 +105,4 @@ Todos los reportes de `data/sample/` son **ficticios** y se generan con `scripts
 
 ---
 
-👤 **Bryan Andrés Romo Arias** · [GitHub](https://github.com/BryanAndresR23) · Otro proyecto: [Portafolio SQL + Power BI](https://github.com/BryanAndresR23/Portafolio-SQL-PowerBI)
+👤 **Bryan Andrés Romo Arias** · [GitHub](https://github.com/BryanAndresR23) · [LinkedIn](https://www.linkedin.com/in/bryanromo) · Otro proyecto: [Portafolio SQL + Power BI](https://github.com/BryanAndresR23/Portafolio-SQL-PowerBI)
